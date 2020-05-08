@@ -3,6 +3,7 @@
  */
 import axios from "axios";
 const qs = require('qs');
+import { message } from 'ant-design-vue';
 // 响应拦截器
 axios.interceptors.response.use(
     (res) => {
@@ -12,7 +13,7 @@ axios.interceptors.response.use(
         if(error.response &&error.response.status===401){
 
         }else {
-
+            message.error("服务异常");
         }
         return Promise.reject(error)
     }
