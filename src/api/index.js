@@ -22,7 +22,7 @@ axios.interceptors.response.use(
 let base = '';
 
 //通用方法
-export const POST = (url, params) => {
+export const POST = (url, params={}) => {
     return axios.post(`${base}${url}`, params, {
         transformRequest: [function (data) {
             let formData = new URLSearchParams();
@@ -32,7 +32,7 @@ export const POST = (url, params) => {
     }).then(res => res.data)
 };
 
-export const GET = (url, params) => {
+export const GET = (url, params={}) => {
     return axios.get(`${base}${url}`, {
         params: params, paramsSerializer: params => {
             return qs.stringify(params, {indices: false})
@@ -40,7 +40,7 @@ export const GET = (url, params) => {
     }).then(res => res ? res.data : res)
 };
 
-export const PUT = (url, params) => {
+export const PUT = (url, params={}) => {
     return axios.put(`${base}${url}`, params, {
         transformRequest: [function (data) {
             let formData = new URLSearchParams();
@@ -50,14 +50,14 @@ export const PUT = (url, params) => {
     }).then(res => res.data)
 };
 
-export const PUT_JSON = (url, params) => {
+export const PUT_JSON = (url, params={}) => {
     return axios.put(`${base}${url}`, params).then(res => res.data)
 };
 
-export const DELETE = (url, params) => {
+export const DELETE = (url, params={}) => {
     return axios.delete(`${base}${url}`, {params: params}).then(res => res.data)
 };
 
-export const PATCH = (url, params) => {
+export const PATCH = (url, params={}) => {
     return axios.patch(`${base}${url}`, params).then(res => res.data)
 };
