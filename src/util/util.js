@@ -1,5 +1,5 @@
 //网络请求的baseUrl
-export const baseUrl='/admin_claim';
+export const baseUrl='';
 //成都天府广场经纬度
 export const CDcenter=[104.063344,30.65988];
 //重置对象里的所有属性值为某值,参数obj为一层对象结构，v为重置的值
