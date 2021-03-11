@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './vuex/store'
 import 'ant-design-vue/dist/antd.less'
+import * as util from './util/util';
+Vue.prototype.$util=util;
 Vue.config.productionTip = false;
 import Antd from 'ant-design-vue';
 Vue.use(Antd);
