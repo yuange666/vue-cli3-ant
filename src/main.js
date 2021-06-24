@@ -4,10 +4,11 @@ import router from './router'
 import store from './vuex/store'
 import 'ant-design-vue/dist/antd.less'
 import * as util from './util/util';
-Vue.prototype.$util=util;
-Vue.config.productionTip = false;
 import Antd from 'ant-design-vue';
+Vue.config.productionTip = false;
+Vue.prototype.$util=util;
 Vue.use(Antd);
+
 const requireComponent = require.context(
     // Look for files in the current directory
     './components/base',
