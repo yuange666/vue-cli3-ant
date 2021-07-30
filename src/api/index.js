@@ -72,7 +72,9 @@ export const PUT_JSON = (url, params={}) => {
 export const DELETE = (url, params={}) => {
     return axios.delete(`${base}${url}`, {params: params}).then(res => res.data)
 };
-
+export const DELETE_JSON = (url,params={})=>{
+    return axios.delete(`${base}${url}`, {data: params}).then(res => res.data)
+};
 export const PATCH = (url, params={}) => {
     return axios.patch(`${base}${url}`, params).then(res => res.data)
 };
