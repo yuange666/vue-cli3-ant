@@ -52,14 +52,7 @@ export const trim=(str)=>{
 export const random=(min, max)=> {
     return Math.round(Math.random() * (max - min)) + min;
 };
-//能够访问所有页面的权限名称
-export const roleAdmin='生态环境局';
-//下载中的按钮文案
-export const downloadText={
-    loading:'下载中...',
-    warnText:'导出中，请勿刷新网页和重复点击!',
-    exportLoading:'导出中...'
-};
+
 //判断一个数组是不是全是某个值
 export const judgeArrAllValue=(arr, value)=> {
     let flag = true;

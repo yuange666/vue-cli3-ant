@@ -36,6 +36,15 @@ requireComponent.keys().forEach((fileName) => {
     // Globally register the component
     Vue.component(componentName, componentConfig.default || componentConfig)
 })
+// 添加全局方法，命名以global开头
+Vue.mixin({
+	methods:{
+		globalUrl(value){
+			return util.baseUrl+value;
+		}
+	}
+})
+
 new Vue({
   router,
   store,
